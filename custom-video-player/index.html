@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./assets/svg/logo-play.svg" />
+    <title>Video Player</title>
+  </head>
+  <body class="body">
+    <h1 class="movie-name">Человек-паук</h1>
+      <section class="video-player">
+        <button class="left arrow-button"></button>
+        <div class="player">
+          <video src="./assets/video/01.mp4" poster="./assets/img/01.jpg" class="movie"></video>
+
+          <div class="player-buttons">
+            <button data-skip="-10" class="rewind-back"><img src="./assets/svg/player-rewind-back.svg" alt="rewind-back" /></button>
+            <button class="play"><img src="./assets/svg/player-play.svg" alt="play" /></button>
+            <button data-skip="10" class="rewind-forward"><img src="./assets/svg/player-rewind-forward.svg" alt="rewind-forward" /></button>
+            <input name="progress-video" type="range" value="0" min="0" max="100" step="0.05" class="progress-video slider" />
+            <div class="icon-box box">
+              <button class="volume"><img src="./assets/svg/player-volume.svg" alt="volume" /></button>
+              <span class="speed">SPEED</span>
+            </div>
+            <div class="slider-box box">
+              <input name="volume" type="range" min="0" max="1" step="0.05" value="1" class="progress-volume slider" />
+              <input name="playbackRate" type="range" min="0.1" max="2" step="0.1" value="1" class="progress-playback slider">
+            </div>
+            <button class="full-screen"><img src="./assets/svg/player-full-screen.svg" alt="full-screen" /></button>
+          </div>
+        </div>
+        <button class="right arrow-button"></button>
+      </section>
+      <h2 class="episode-name">Человек-Паук: Нет пути домой </h2>
+        <script src="./script.js"></script>
+      </body>
+</html>

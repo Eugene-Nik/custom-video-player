@@ -1,0 +1,277 @@
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*--------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  background: url("./assets/img/Body-BG.jpg") center no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content:space-evenly;
+  flex-direction: column;
+}
+.video-player{
+  display: flex;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+.movie-name{
+ font-family: "Alumni Sans", sans-serif;
+ font-size: 100px;
+ font-weight: bold;
+ color: rgba(172, 35, 35, 0.7);
+
+}
+.arrow-button{
+  border-radius: 50%;
+  font-size: 25px;
+  border:  2px solid rgba(172, 35, 35, 0.7);
+}
+
+.left{
+background: url("./assets/svg/chevron-left-solid.svg") rgba(255, 255, 255, 0.7) center no-repeat;
+height: 150px;
+width: 150px;
+
+}
+.left:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+}
+.left:active{
+position: relative;
+top: 3px;
+transition: 0.3s;
+}
+.right{
+background: url("./assets/svg/chevron-right-solid.svg") rgba(255, 255, 255, 0.7) center no-repeat;
+height: 150px;
+width: 150px;
+}
+.right:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+}
+.right:active{
+position: relative;
+top: 3px;
+transition: 0.3s;
+
+}
+.player {
+  border: 10px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 75px rgba(172, 35, 35, 0.6);
+  position: relative;
+  max-width: 1100px;
+  font-size: 0;
+  overflow: hidden;
+  margin: 0 20px;
+
+}
+
+.player:fullscreen {
+  max-width: none;
+  width: 100%;
+
+}
+
+.player:-webkit-full-screen {
+  max-width: none;
+  width: 100%;
+}
+
+.movie {
+  width: 100%;
+}
+
+.player-buttons {
+  max-width: 1440px;
+  position: absolute;
+  height: 65px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%) translateY(0px);
+  transition: all 0.3s;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.player:hover .player-buttons {
+  transform: translateY(0);
+}
+
+.progress-video {
+  background: linear-gradient(to right, #24809e 0%, #24809e 0%, #c4c4c4 0%, #c4c4c4 100%);
+  height: 8px;
+  width: 600px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.progress-video::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  -webkit-appearance: none;
+  cursor: default;
+  background: #ffffff;
+  border-radius: 50px;
+}
+.speed{
+  margin-top: 10px;
+  font-size: 15px;
+  color: #c4c4c4;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.progress-volume {
+  background: linear-gradient(to right, #24809e 0%, #24809e 100%, #c4c4c4 100%, #c4c4c4 100%);
+  height: 8px;
+  width: 120px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.progress-volume::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  -webkit-appearance: none;
+  cursor: default;
+  background: #ffffff;
+  border-radius: 50px;
+}
+
+
+.progress-playback {
+  margin-top: 25px;
+  background: linear-gradient(to right, #24809e 0%, #24809e 50%, #c4c4c4 50%, #c4c4c4 100%);
+  height: 8px;
+  width: 120px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.progress-playback::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  -webkit-appearance: none;
+  cursor: default;
+  background: #ffffff;
+  border-radius: 50px;
+}
+
+
+.player-buttons button {
+  background-color: transparent;
+  border: 0;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  max-width: 50px;
+}
+.player-buttons button:hover {
+  opacity: 0.75;
+  transition: 0.5s;
+}
+.player-buttons button:active{
+  position: relative;
+  top: 3px;
+  transition: 0.3s;
+}
+
+.episode-name{
+  font-family: "Alumni Sans", sans-serif;
+ font-size: 70px;
+ font-weight: bold;
+ color: white;
+ -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: rgba(172, 35, 35, 0.6);
+}
